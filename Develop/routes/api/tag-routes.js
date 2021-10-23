@@ -15,9 +15,13 @@ router.get('/', async (req, res) => {
           attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
         }
       ]
-     });
+     })
     //const tagData = await Tag.findAll();
    // console.log("After find all" + tagData);
+   if (!tagData) {
+    res.status(404).json({ message: 'No tag found!' });
+    return;
+  }
     res.status(200).json(tagData);
   } catch (err) {
     res.status(500).json(err);

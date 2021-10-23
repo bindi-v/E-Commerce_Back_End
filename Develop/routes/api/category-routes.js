@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
   })
   //.then(categoryData => res.json(categoryData))
   if (!categoryData) {
-    res.status(404).json({ message: 'No category found with this id!' });
+    res.status(404).json({ message: 'No category found!' });
     return;
   }
 
@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'No location found with this id!' });
+      res.status(404).json({ message: 'No category found with this id!' });
       return;
     }
 
