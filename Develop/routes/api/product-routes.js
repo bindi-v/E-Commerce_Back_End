@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'No traveller found with this id!' });
+      res.status(404).json({ message: 'No product found with this id!' });
       return;
     }
 
@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
     });
    // res.status(200).json(productData);
 //} catch (err) {
-   // res.status(400).json(err);
+   // res.status(500).json(err);
  // }
   /* req.body should look like this...
     {
@@ -92,7 +92,7 @@ router.post('/', (req, res) => {
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {
       console.log(err);
-      res.status(400).json(err);
+      res.status(500).json(err);
     });
 });
 
@@ -134,14 +134,14 @@ router.put('/:id', (req, res) => {
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
       // console.log(err);
-      res.status(400).json(err);
+      res.status(500).json(err);
     });
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
   try {
-    const productData = await Product.destroy({
+    const productData = Product.destroy({
       where: {
         id: req.params.id
       }
