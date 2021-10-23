@@ -9,12 +9,10 @@ router.get('/', async (req, res) => {
   try {
    // console.log("B4 find all");
     const tagData = await Tag.findAll({
-       include: [
-        {
+       include: [{
            model: Product,
-          attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
-        }
-      ]
+           attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+        }]
      })
     //const tagData = await Tag.findAll();
    // console.log("After find all" + tagData);
