@@ -92,7 +92,6 @@ If you have any questions, please reach out to my Github.
 
 * [If above link not work, try this link](https://drive.google.com/file/d/1Kdrdl2i9kIXo_pGV8VJ74DX56BBxA3sU/view)
 
-Coming Soon! Working on Application, sorry for any inconvenience.
 
 ### Repository
 
