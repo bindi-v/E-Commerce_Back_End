@@ -96,3 +96,5 @@ If you have any questions, please reach out to my Github.
 ### Repository
 
 * [The URL of the GitHub repository](https://github.com/bindi-v/E-Commerce_Back_End)
+
+#### Thank you for visiting my Github.
